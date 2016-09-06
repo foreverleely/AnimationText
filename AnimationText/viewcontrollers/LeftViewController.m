@@ -46,7 +46,7 @@
         make.top.mas_equalTo(20);
         make.left.mas_equalTo(self.view.mas_left);
         make.width.mas_equalTo(ScreenSize.width);
-        make.height.mas_equalTo(35 * dataArray.count);
+        make.height.mas_equalTo(50 * dataArray.count);
     }];
     __weak typeof(self) weakself = self;
     leftTableView.leftRowSelect = ^(NSIndexPath *indexpath) {

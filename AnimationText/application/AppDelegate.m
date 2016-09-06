@@ -6,6 +6,10 @@
 //  Copyright © 2016年 liyang. All rights reserved.
 //
 
+/**
+ *  这里的动画效果都不涉及私有API问题，包括，基础动画，关键帧动画，以及过渡动画
+ */
+
 #import "AppDelegate.h"
 
 #import "UIImage+Util.h"
@@ -16,6 +20,8 @@
 #import "BaseCenterViewController.h"
 
 #import "SWRevealViewController.h"
+
+#import "CellActionViewController.h"
 
 @interface AppDelegate ()
 
@@ -90,11 +96,12 @@
     SWRevealViewController *revealviewcontroller = [[SWRevealViewController alloc] initWithRearViewController:leftVC frontViewController:navcenterVC];
     revealviewcontroller.rightViewController = rightVC;
     //浮动层离左边距的宽度
-    revealviewcontroller.rearViewRevealWidth = 200;
+    revealviewcontroller.rearViewRevealWidth = 100;
     //是否让浮动层弹回原位
     [revealviewcontroller setFrontViewPosition:FrontViewPositionLeft animated:YES];
     
     self.window.rootViewController = revealviewcontroller;
+//    self.window.rootViewController = [CellActionViewController new];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 }

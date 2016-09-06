@@ -37,6 +37,7 @@
     _swipeBar.selectedTitleTextAttributes = selecttextattributes;
     _swipeBar.titleTextAttributes = unselecttextattributes;
     _swipeBar.segmentEdgeInset = UIEdgeInsetsMake(0, 10, 0, 10);
+    _swipeBar.selectionIndicatorLocation = HMSegmentedControlSelectionIndicatorLocationDown;
     [_swipeBar addTarget:self action:@selector(swipevalueChange:) forControlEvents:UIControlEventValueChanged];
     _swipeView = [[SwipeView alloc] init];
     _swipeView.dataSource = self;
